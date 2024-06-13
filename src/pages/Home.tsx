@@ -1,10 +1,10 @@
 import { CardLocate, CardRide, FeatureCard } from "../components/Cards";
-import { Aside, Footer, Header } from "../utils/Helpers";
+import { Aside, Footer, HeaderButton } from "../utils/Helpers";
 
 function Home() {
 	return (
 		<>
-		<Header 
+		<HeaderButton 
 		image="./images/home-hero-mobile.jpg"
 		title="Scooter sharing made simple"
 		description="Scoot takes the hassle out of urban mobility. Our bikes are
@@ -12,7 +12,8 @@ function Home() {
 						app to locate the nearest bike, unlock it with a tap, and you’re
 						away!"
 		buttonText="Get Scootin"/>
-			<div className="cards">
+		
+			<div className="mt-28 mb-20 px-8">
 				<CardLocate
 					title="Locate with app"
 					text="Use the app to find the nearest scooter to you. We are

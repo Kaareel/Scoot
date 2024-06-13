@@ -16,7 +16,7 @@ export const IconRide = () => {
 export const IconChevron = () => {
 	return (
         <div className="flex justify-center">
-            <img src="./icon/chevron.svg" alt="chevron" />
+            <img src="./icon/chevron.svg" alt="chevron" className="w-5 h-5"/>
         </div>
     );
 }

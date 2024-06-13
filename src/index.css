@@ -25,11 +25,6 @@ code {
   outline: dashed #fcb72b;
   color: #fcb72b;
 }
-.cards {
-  margin: 7rem auto 5rem;
-  padding: 0 2rem;
-  max-width: 35.8125rem;
-}
 .aside {
   background-color: #495567;
   background-image: url(../public/images/semi-circles.svg);
