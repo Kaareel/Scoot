@@ -1,3 +1,5 @@
+import { Aside, Footer } from "../utils/Helpers";
+
 function Careers() {
 	return (
 		<>
@@ -219,76 +221,8 @@ function Careers() {
 					</div>
 				</div>
 			</div>
-			<aside>
-				<div className="aside">
-					<div>
-						<h1 className="text-center text-4xl pb-12 font-bold text-white leading-[1.1] tracking-[-1.43px]">
-							Sign up and Scoot off today
-						</h1>
-						<ul className="flex gap-4">
-							<li>
-								{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-								<a href="#">
-									<img src="./images/google-play.svg" alt="google-play" />
-								</a>
-							</li>
-							<li>
-								{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-								<a href="#">
-									<img src="./images/app-store.svg" alt="app-store" />
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</aside>
-			<footer>
-				<div className="bg-colorThird p-14">
-					<ul className="flex flex-col items-center gap-6">
-						<li>
-							<img src="./logo.svg" alt="logo" />
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								About
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								Location
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								Careers
-							</a>
-						</li>
-					</ul>
-					<ul className="flex justify-evenly mt-6">
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/facebook.svg" alt="Facebook" />
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/twitter.svg" alt="twitter" />
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/instagram.svg" alt="instagram" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			</footer>
+			<Aside/>
+			<Footer/>
 		</>
 	);
 }

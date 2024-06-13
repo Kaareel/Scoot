@@ -1,3 +1,8 @@
+import { Accordion } from "../components/Accordion";
+import { AboutCard, AboutFeatureCard } from "../components/Cards";
+import { TitlePrimary, TitleSecondary } from "../components/Title";
+import { Aside, Footer } from "../utils/Helpers";
+
 function About() {
 	return (
 		<>
@@ -15,151 +20,62 @@ function About() {
 					</div>
 				</div>
 			</header>
-			<div className="mt-28 mb-20 px-8">
-				<div>
-					<img
-						src="./images/digital-era.jpg"
-						alt="digital-era"
-						className="rounded-full"
-					/>
-					<div className="text-center">
-						<h1 className="text-textSecondary mt-4 text-4xl leading-[1.1] tracking-[-1.43px]">
-							Mobility for the digital era
-						</h1>
-						<p className="text-textPrimary text-sm mt-8">
-							Getting around should be simple (and even fun!) for everyone. We
-							embrace technology to provide low cost, smart access to scooters
-							at your fingertips.
-						</p>
-					</div>
-				</div>
-				<div>
-					<img
-						src="./images/better-living.jpg"
-						alt="better-living"
-						className="rounded-full"
-					/>
-					<div className="text-center">
-						<h1 className="text-textSecondary mt-4 text-4xl leading-[1.1] tracking-[-1.43px]">
-							Better urban living
-						</h1>
-						<p className="text-textPrimary text-sm mt-8">
-							We’re helping connect cities and bring people closer together. Our
-							scooters are also fully-electric and we offset the minimal carbon
-							footprint for each ride.
-						</p>
-					</div>
+			<div className="px-8">
+				<div className="mt-28">
+				<AboutFeatureCard
+					image="./images/digital-era.jpg"
+					title="Mobility for the digital era"
+					text="Getting around should be simple (and even fun!) for everyone. We
+                embrace technology to provide low cost, smart access to scooters
+                at your fingertips."
+				/>
+				<AboutFeatureCard
+					image="./images/better-living.jpg"
+					title="Better living"
+					text="Getting around should be simple (and even fun!) for everyone. We
+                embrace technology to provide low cost, smart access to scooters"/>
 				</div>
 			</div>
 			<div className="mt-28 mb-20 px-8">
-				<h1 className="text-center text-4xl font-bold tracking-[-1.43px] text-textSecondary">
-					Our values
-				</h1>
+				<TitlePrimary title="Our values"/>
 				<div className="mt-28">
 					<div className="text-center mb-16">
-						<div className="flex flex-col justify-center items-center relative">
-							<div className="flex flex-col">
-								<div className=" mb-20 -mt-10 relative">
-									<p className="flex justify-center items-center absolute left-2/4 z-[1] -bottom-12 -ml-12 bg-customOrange rounded-full w-24 h-24">
-										01
-									</p>
-									<img
-										src="./images/our-tech.jpg"
-										alt="our-tech"
-										className="rounded-full block w-full"
-									/>
-								</div>
-								<h1 className="text-center text-textSecondary text-xl mt-4">
-									Our tech
-								</h1>
-								<p className="text-center text-textPrimary text-sm mt-8">
-									We’re using cutting edge technology to drive accessible urban
-									transportation forward. Our fully electric scooters are a joy
-									to ride!
-								</p>
-							</div>
-						</div>
-						<div className="mt-28">
-							<div className="text-center mb-16">
-								<div className="flex flex-col justify-center items-center relative">
-									<div className="flex flex-col">
-										<div className=" mb-20 -mt-10 relative">
-											<p className="flex justify-center items-center absolute left-2/4 z-[1] -bottom-12 -ml-12 bg-customOrange rounded-full w-24 h-24">
-												02
-											</p>
-											<img
-												src="./images/our-integrity.jpg"
-												alt="our-integrity"
-												className="rounded-full block w-full"
-											/>
-										</div>
-										<h1 className="text-center text-textSecondary text-xl mt-4">
-											Our integrity
-										</h1>
-										<p className="text-center text-textPrimary text-sm mt-8">
-											{" "}
-											We are fully committed to deliver a great yet safe,
-											sustainable micro-mobility experience in every city we
-											serve.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="mt-28">
-							<div className="text-center mb-16">
-								<div className="flex flex-col justify-center items-center relative">
-									<div className="flex flex-col">
-										<div className=" mb-20 -mt-10 relative">
-											<p className="flex justify-center items-center absolute left-2/4 z-[1] -bottom-12 -ml-12 bg-customOrange rounded-full w-24 h-24">
-												03
-											</p>
-											<img
-												src="./images/our-community.jpg"
-												alt="our-community"
-												className="rounded-full block w-full"
-											/>
-										</div>
-										<h1 className="text-center text-textSecondary text-xl mt-4">
-											Our community
-										</h1>
-										<p className="text-center text-textPrimary text-sm mt-8">
-											{" "}
-											We support every community we serve. All workers are paid
-											a living wage based on their location and are Scoot
-											employees.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						<AboutCard
+							image="./images/our-tech.jpg"
+							title="Our integrity"
+							text="We’re using cutting edge technology to drive accessible urban
+								  transportation forward. Our fully electric scooters are a joy
+								  to ride!"
+							count="01" />
+						<AboutCard
+							image="./images/our-integrity.jpg"
+							title="Our tech"
+							text="We are fully committed to deliver a great yet safe,
+								  sustainable micro-mobility experience in every city we
+								  serve."
+							count="02" />
+						<AboutCard
+							image="./images/our-community.jpg"
+							title="Our community"
+							text="We support every community we serve. All workers are paid
+								  a living wage based on their location and are Scoot
+								  employees."
+							count="03" />
 					</div>
 				</div>
 			</div>
 			<div className=" mt-[92px] mb-20">
-				<h1 className="text-center text-4xl font-bold tracking-[-1.43px] text-textSecondary">
-					faqs
-				</h1>
+			<TitlePrimary title="faqs"/>
 				<div className="Accordion p-8 m-auto">
-					<h2 className="text-center text-2xl font-black tracking-[-1.43px] text-textSecondary mt-2">
-						How it works
-					</h2>
+					<TitleSecondary title="How it works"/>
 					<div className="componente-acordion mt-7">
 						<div className="accordion-1 mb-4">
-							<div className="bg-accordionColor rounded-t-s border pt-4 px-8 pb-8">
-								<button
-									type="button"
-									className="text-titleAccordionColor focus:bg-[#fff4df] focus:border-[#86b7fe] focus:text-[#0c63e4]"
-								>
-									How do I download the app?
-								</button>
-								<p>
-									To download the Scoot app, you can search “Scoot” in both the
+							<Accordion 
+							title="How do I download the app?"
+							content="To download the Scoot app, you can search “Scoot” in both the
 									App and Google Play stores. An even simpler way to do it would
 									be to click the relevant link at the bottom of this page and
-									you’ll be re-directed to the correct page.
-								</p>
-							</div>
+									you’ll be re-directed to the correct page."/>
 						</div>
 						<div className="accordion-2 bg-accordionColor rounded-t-s border pt-4 px-8 pb-8 mb-4">
 							<div className="text-titleAccordionColor focus:bg-[#fff4df] focus:border-[#86b7fe] focus:text-[#0c63e4]">
@@ -250,76 +166,8 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<aside>
-				<div className="aside">
-					<div>
-						<h1 className="text-center text-4xl pb-12 font-bold text-white leading-[1.1] tracking-[-1.43px]">
-							Sign up and Scoot off today
-						</h1>
-						<ul className="flex gap-4">
-							<li>
-								{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-								<a href="#">
-									<img src="./images/google-play.svg" alt="google-play" />
-								</a>
-							</li>
-							<li>
-								{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-								<a href="#">
-									<img src="./images/app-store.svg" alt="app-store" />
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</aside>
-			<footer>
-				<div className="bg-colorThird p-14">
-					<ul className="flex flex-col items-center gap-6">
-						<li>
-							<img src="./logo.svg" alt="logo" />
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								About
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								Location
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#" className="block style-nav text-white rounded mb-4">
-								Careers
-							</a>
-						</li>
-					</ul>
-					<ul className="flex justify-evenly mt-6">
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/facebook.svg" alt="Facebook" />
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/twitter.svg" alt="twitter" />
-							</a>
-						</li>
-						<li>
-							{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-							<a href="#">
-								<img src="./icon/instagram.svg" alt="instagram" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			</footer>
+			<Aside />
+			<Footer />
 		</>
 	);
 }
