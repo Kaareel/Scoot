@@ -34,3 +34,12 @@ code {
   background-position: 80% 100%;
   background-size: auto;
 }
+@media screen and (min-width: 67.5rem) {
+  .aside__wrapper {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: auto
+  }
+}

@@ -20,3 +20,10 @@ export const IconChevron = () => {
         </div>
     );
 }
+export const IconScooter = () => {
+	return (
+        <div className="flex justify-center">
+            <img src="./icon/scooter.svg" alt="scooter" />
+        </div>
+    );
+}

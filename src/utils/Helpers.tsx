@@ -2,6 +2,7 @@ import { useRef } from "react";
 
 interface PropsHeader {
 	image: string,
+	set?: string;
 	title: string,
 	description?: string,
 	buttonText?: string,
@@ -9,11 +10,11 @@ interface PropsHeader {
 
 export const Footer = () => {
 	return (
-		<footer>
-			<div className="bg-colorThird p-14">
-				<ul className="flex flex-col items-center gap-6">
+		<footer className="bg-colorThird">
+			<div className=" p-14 md:px-[165px] md:mx-8 md:flex md:justify-between md:items-center">
+				<ul className="flex flex-col md:flex md:flex-row md:gap-8 items-center gap-6">
 					<li>
-						<img src="./logo.svg" alt="logo" />
+						<img src="./logo.svg" alt="logo"/>
 					</li>
 					<li>
 						{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
@@ -34,7 +35,7 @@ export const Footer = () => {
 						</a>
 					</li>
 				</ul>
-				<ul className="flex justify-evenly mt-6">
+				<ul className="flex justify-evenly mt-6 md:flex md:justify-center">
 					<li>
 						{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
 						<a href="#">
@@ -58,12 +59,11 @@ export const Footer = () => {
 		</footer>
 	)
 }
-
 export const Aside = () => {
 	return (
 		<aside id="signupSection">
 			<div className="aside">
-				<div>
+				<div className="md:flex md:items-center md:justify-between items-center">
 					<h1 className="text-center text-4xl pb-12 font-bold text-white leading-[1.1] tracking-[-1.43px]">
 						Sign up and Scoot off today
 					</h1>
@@ -96,11 +96,11 @@ export const HeaderButton = (props: PropsHeader) => {
 	};
 	return (
 		<header className="relative">
-			{/* biome-ignore lint/a11y/noRedundantAlt: <explanation> */}
-			<img src={props.image} alt="image" className="" />
-			<div className="absolute -top-[.3rem] w-full items-center">
-				<div className="absolute px-8 top-[100px] m-auto">
-					<h1 className=" text-center text-5xl font-bold text-white leading-[1.2]">
+				{/* biome-ignore lint/a11y/noRedundantAlt: <explanation> */}
+			<img src={props.image} srcSet={props.set} alt="image" className="md:w-full h-[68vh]"/>
+			<div className="absolute top-10 w-full items-center md:pl-[165px]">
+				<div className="px-8 top-[100px] m-auto">
+					<h1 className=" text-center text-4xl font-bold text-white leading-[1.2]">
 						{props.title}
 					</h1>
 					<p className="text-center text-white mt-4 mb-8">

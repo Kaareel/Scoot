@@ -1,4 +1,4 @@
-import { AboutCard, CarrersCard, FeatureCard } from "../components/Cards";
+import { AboutCard, CarrersCard,  FeatureCard1 } from "../components/Cards";
 import { TitlePrimary } from "../components/Title";
 import { Aside, Footer, Header } from "../utils/Helpers";
 
@@ -9,7 +9,7 @@ function Careers() {
 		image="./images/careers-location-hero-mobile.jpg"
 		title="Careers"/>
 			<div className="px-8 pt-40">
-				<FeatureCard
+				<FeatureCard1
 				image="./images/join-us.jpg"
 				title="Care to join our mission"
 				text="We’re always looking for ambitious individuals to help us on our

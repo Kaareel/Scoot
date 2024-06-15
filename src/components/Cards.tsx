@@ -1,4 +1,4 @@
-import { IconLocate, IconRide } from "../utils/Icon";
+import { IconLocate, IconRide, IconScooter } from "../utils/Icon";
 
 interface PropsHome {
     title: string;
@@ -11,6 +11,20 @@ export const CardLocate = (props: PropsHome) => {
     return (
         <div className="flex flex-col justify-center mb-16">
             <IconLocate />
+            <div className="text-center">
+                <h1 className="text-textSecondary mt-4 text-xl">{props.title}</h1>
+                <p className="text-textPrimary text-sm mt-8">
+                    {props.text}
+                </p>
+            </div>
+        </div>
+
+    )
+}
+export const CardScooter = (props: PropsHome) => {
+    return (
+        <div className="flex flex-col justify-center mb-16">
+            <IconScooter />
             <div className="text-center">
                 <h1 className="text-textSecondary mt-4 text-xl">{props.title}</h1>
                 <p className="text-textPrimary text-sm mt-8">
@@ -35,15 +49,44 @@ export const CardRide = (props: PropsHome) => {
 
     )
 }
-export const FeatureCard = (props: PropsHome) => {
+export const FeatureCard1 = (props: PropsHome) => {
     return (
-        <div className="mb-16">
+        <div className="mb-16 md:mb-[120px] md:flex md:flex-row-reverse md:items-center md:pl-[165px]">
             <img
                 src={props.image}
                 alt="telemetry"
-                className="rounded-full"
+                className="rounded-full md:w-full  block md:mx-[185px]"
             />
-            <div className="text-center">
+            <div className="text-center md:text-left">
+                <h1 className="text-textSecondary mt-4 text-4xl font-blond leading-[1.1] tracking-[-1.43px]">
+                    {props.title}
+                </h1>
+                <p className="text-textPrimary text-sm mt-8">
+                    {props.text}
+                </p>
+                <div className="mt-12">
+                    <a
+                        // biome-ignore lint/a11y/useValidAnchor: <explanation>
+                        href="#"
+                        className="bg-customOrange border-4 hover:border-2 border-transparent text-white px-12 py-3 style rounded"
+                    >
+                        {props.button}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+export const FeatureCard2 = (props: PropsHome) => {
+    return (
+        <div className="mb-16 md:mb-[120px] md:flex md:items-center md:pr-[165px]">
+            <img
+                src={props.image}
+                alt="telemetry"
+                className="rounded-full md:w-full block md:mx-[185px]"
+            />
+            <div className="text-center md:text-left">
                 <h1 className="text-textSecondary mt-4 text-4xl font-blond leading-[1.1] tracking-[-1.43px]">
                     {props.title}
                 </h1>
@@ -88,14 +131,12 @@ export const BasiCard = (props: PropsHome) => {
 
     )
 }
-
 interface PropsAbout {
     title: string;
     text: string;
     image?: string;
     count?: string;
 }
-
 export const AboutFeatureCard = (props: PropsAbout) => {
     return (
         <div className=" mb-[120px]">
@@ -146,7 +187,6 @@ interface Carrers {
     locate: string;
     button: string;
 }
-
 export const CarrersCard = (props: Carrers) => {
     return (
         <div className="bg-accordionColor flex flex-col justify-center items-center py-8 gap-2">

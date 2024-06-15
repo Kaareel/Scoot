@@ -16,8 +16,8 @@ function Navbar() {
 	};
 
 	return (
-		<nav className=" bg-white p-6 flex justify-start items-end">
-			<div className="container mx-auto flex items-center  md:px-40 md:py-6">
+		<nav className=" bg-white p-6 md:px-40 flex justify-start items-end md:w-full md:m-auto">
+			<div className="container flex items-center md:justify-between">
 				<div className="md:hidden relative z-10">
 					<button
 						type="button"
@@ -42,31 +42,33 @@ function Navbar() {
 						</svg>
 					</button>
 				</div>
-				<div className="m-auto md:w-[222px]">
-					<Link to="/home" className=" outline-none">
-						<img src="./logo.svg" alt="logo" />
-					</Link>
-				</div>
-				<div className="hidden md:flex lg:flex ">
-					<ul className="flex lg:flex-1 lg:flex-grow-1 lg:flex-shrink-1 lg:w-[20%] justify-between items-center">
-						<li className="mb-0">
-							<Link to="/about" className="flex items-center text-textPrimary style-nav rounded">About</Link>
-						</li>
-						<li className="mb-0">
-							<Link to="/Locations" className="flex items-center text-textPrimary style-nav rounded">Locate</Link>
-						</li>
-						<li className="mb-0">
-							<Link to="/Careers" className="flex items-center text-textPrimary style-nav rounded">Carrers</Link>
-						</li>
-					</ul>
-					{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-					<a
-						href="#"
-						onClick={(e) => handleScroll(e, 'signupSection')}
-						className="bg-customOrange border-4 hover:border-2 border-transparent text-white px-12 py-3 mt-4 style rounded"
-					>
-						Get Scootin
-					</a>
+				<div className="md:flex md:items-center">
+					<div>
+						<Link to="/home" className=" outline-none">
+							<img src="./logo.svg" alt="logo" />
+						</Link>
+					</div>
+					<div className="hidden md:flex md:justify-between">
+						<ul className="flex justify-between items-center">
+							<li className="mb-0">
+								<Link to="/about" className="flex items-center text-textPrimary style-nav rounded">About</Link>
+							</li>
+							<li className="mb-0">
+								<Link to="/Locations" className="flex items-center text-textPrimary style-nav rounded">Locate</Link>
+							</li>
+							<li className="mb-0">
+								<Link to="/Careers" className="flex items-center text-textPrimary style-nav rounded">Carrers</Link>
+							</li>
+						</ul>
+						{/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+						<a
+							href="#"
+							onClick={(e) => handleScroll(e, 'signupSection')}
+							className="bg-customOrange border-4 hover:border-2 border-transparent text-white px-12 py-3 mt-4 style rounded"
+						>
+							Get Scootin
+						</a>
+					</div>
 				</div>
 			</div>
 			{isOpen && (
