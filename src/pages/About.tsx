@@ -1,5 +1,5 @@
 import { Accordion } from "../components/Accordion";
-import { AboutCard, AboutFeatureCard } from "../components/Cards";
+import { AboutCard, AboutFeatureCard1, AboutFeatureCard2 } from "../components/Cards";
 import { TitlePrimary, TitleSecondary } from "../components/Title";
 import { Aside, Footer, Header } from "../utils/Helpers";
 
@@ -8,17 +8,19 @@ function About() {
 		<>
 			<Header
 				image="./images/about-hero-mobile.jpg"
-				title="About"/>
+				set="./images/about-hero-mobile.jpg 1x, ./images/about-hero-desktop.jpg 2x"
+				title="About" />
+
 			<div className="px-8">
 				<div className="mt-28">
-					<AboutFeatureCard
+					<AboutFeatureCard1
 						image="./images/digital-era.jpg"
 						title="Mobility for the digital era"
 						text="Getting around should be simple (and even fun!) for everyone. We
                 embrace technology to provide low cost, smart access to scooters
                 at your fingertips."
 					/>
-					<AboutFeatureCard
+					<AboutFeatureCard2
 						image="./images/better-living.jpg"
 						title="Better living"
 						text="Getting around should be simple (and even fun!) for everyone. We
@@ -27,8 +29,8 @@ function About() {
 			</div>
 			<div className="mt-28 mb-20 px-8">
 				<TitlePrimary title="Our values" />
-				<div className="mt-28">
-					<div className="text-center mb-16">
+				<div className="mt-28 mb-16 ">
+					<div className="text-center mb-16 md:flex md:justify-center md:items-center md:gap-16">
 						<AboutCard
 							image="./images/our-tech.jpg"
 							title="Our integrity"
@@ -55,9 +57,11 @@ function About() {
 			</div>
 			<div className=" mt-[92px] mb-20">
 				<TitlePrimary title="faqs" />
-				<div className="Accordion p-8 m-auto">
+				<div className="md:flex md:justify-center md:items-start md:px-40 md:py-10 p-8">
+					<div className="md:flex md:mt-2 md:flex-grow md:flex-shrink md:basis-1/4">
 					<TitleSecondary title="How it works" />
-					<div className="flex flex-col mt-7">
+					</div>
+					<div className="flex flex-col mt-7 md:w-3/5">
 						<Accordion
 							title="How do I download the app?"
 							content="To download the Scoot app, you can search “Scoot” in both the
@@ -75,9 +79,11 @@ function About() {
 									laws and the license you need to be able to ride our Scoots."/>
 					</div>
 				</div>
-				<div className="Accordion p-8 m-auto">
+				<div className="md:flex md:justify-center md:items-start md:px-40 md:py-10 p-8">
+					<div className="md:flex md:mt-2 md:flex-grow md:flex-shrink md:basis-1/4">
 					<TitleSecondary title="Safe driving" />
-					<div className="flex flex-col mt-7">
+					</div>
+					<div className="flex flex-col mt-7 md:w-3/5">
 						<Accordion
 							title="Should I wear a helmet?"
 							content="Yes, please do! All cities have different laws. But we

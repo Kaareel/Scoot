@@ -26,7 +26,7 @@ function Locations() {
 						<h2>Jakarta</h2>
 					</div>
 				</div>
-				<div className=" mt-14 text-center px-16">
+				<div className="">
 					<BasiCard
 					title="Your city not listed?"
 					text="If you’d like to see Scoot in your hometown, be sure to let us know.
