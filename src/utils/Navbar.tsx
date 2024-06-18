@@ -16,8 +16,8 @@ function Navbar() {
 	};
 
 	return (
-		<nav className=" bg-white p-6 md:px-40 flex justify-start items-end md:w-full md:m-auto">
-			<div className="container flex items-center md:justify-between">
+		<nav className=" bg-white p-6 md:px-40 flex lg:justify-start lg:items-end ">
+			<div>
 				<div className="md:hidden relative z-10">
 					<button
 						type="button"
@@ -42,7 +42,7 @@ function Navbar() {
 						</svg>
 					</button>
 				</div>
-				<div className="md:flex md:items-center">
+				<div className="md:flex md:items-center w-full">
 					<div>
 						<Link to="/home" className=" outline-none">
 							<img src="./logo.svg" alt="logo" />

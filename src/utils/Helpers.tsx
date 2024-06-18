@@ -1,4 +1,4 @@
-import { useRef } from "react";
+
 
 interface PropsHeader {
 	image: string,
@@ -123,12 +123,13 @@ export const HeaderButton = (props: PropsHeader) => {
 }
 export const Header = (props: PropsHeader) => {
 	return (
-		<header className="relative">
+		<header className="relative lg:max-w-[1440px] lg:flex lg:justify-start lg:bg-no-repeat lg:size-full lg:bg-">
 			<div>
 				<img
 					src={props.image}
+					srcSet={props.set}
 					alt="about-hero"
-					className="absolute"
+					className="absolute md:w-full"
 				/>
 				<h1 className="relative text-center top-[3.2rem] px-8 text-[40px] leading-[1.2] text-white">
 					{props.title}

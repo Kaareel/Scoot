@@ -18,9 +18,9 @@ function Careers() {
 					  you!"
 				button="Say Hello"/>
 				<div className="mt-28 mb-20 px-8">
-				<TitlePrimary title="Our values" />
-				<div className="mt-28">
-					<div className="text-center mb-16">
+				<TitlePrimary title="Why join us?" />
+				<div className="mt-28 mb-16">
+					<div className="text-center mb-16 md:flex md:justify-center md:items-center md:gap-16">
 						<AboutCard
 							image="./images/our-tech.jpg"
 							title="Our integrity"
@@ -45,7 +45,7 @@ function Careers() {
 					</div>
 				</div>
 			</div>
-				<div className="flex flex-col gap-5 mt-28 mb-20 py-8">
+				<div className="flex flex-col gap-5 mt-28 mb-20 py-8 md:mx-40">
 					<CarrersCard
 					title="General Manager"
 					locate="Jakarta, Indonesia"

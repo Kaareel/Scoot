@@ -6,9 +6,8 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  max-width: 1440px;
 }
 .style:focus,
 .style:hover {
